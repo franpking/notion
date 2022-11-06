@@ -4,11 +4,9 @@
     <style>
       #lbl {
         display: flex;
-        font-family: sans-serif;
+        font-family: sans-serif workhorse;
         font-size: 11pt;
         color: #808080;
-        padding: 5px;
-        border: 1px solid #ffffff;
         justify-content: left;
         line-height: 1.5;
         height:85%;
@@ -53,19 +51,12 @@
     var dayOfWeek = weekday[today.getDay()];
     var date = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}, ${today.getFullYear()}`;
 
-    var greet;
-
-    if (hrs < 12)
-        greet = 'Good morning, Francis.  ';
-    else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good afternoon, Francis. ';
-    else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good evening, Francis.  ';
+ 
 
     document.getElementById('lbl').innerHTML = `
         <div class="container">
           <div id="date"> ${date}</div>
-          <div class="greeting">${greet}</div>
+         
         <div/>
     `;
 </script> 
